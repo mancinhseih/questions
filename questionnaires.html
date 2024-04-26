@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>随机跳转</title>
+</head>
+<body>
+
+<button onclick="randomRedirect()">請點我進入問卷</button>
+
+<script>
+function randomRedirect() {
+    // 定義三個網頁的連結
+    var urls = [
+        "https://forms.gle/CB6z9PaFtkFahgBp6",
+        "https://forms.gle/8hRqxodj5bz8zztP8",
+        "https://forms.gle/gqFrSWMuFUwrsard8"
+    ];
+    
+    // 生成一个随机数，范围是0到2，对应数组的索引
+    var randomIndex = Math.floor(Math.random() * urls.length);
+    
+    // 使用随机数来选择要跳转的链接
+    var randomUrl = urls[randomIndex];
+    
+    // 跳转到随机选择的链接
+    window.location.href = randomUrl;
+}
+</script>
+
+</body>
+</html>
